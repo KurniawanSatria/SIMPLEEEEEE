@@ -1,3 +1,9 @@
+document.addEventListener('DOMContentLoaded', function() {
+let dudio = new Audio('https://github.com/SatganzDevs/personal-portfolioV5/raw/main/assets/audio/Rammstein%20%20Sonne.mp3')
+Swal.fire('Hello, World.').then(dudio.play())
+})
+
+
 function toggleMenu() {
   const menu = document.querySelector(".menu-links");
   const icon = document.querySelector(".hamburger-icon");

@@ -1,400 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kurniawan Satria - Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/657daeb707843602b802ca5e/default';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    <!--End of Tawk.to Script-->
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Kurniawan Satria</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Kurniawan Satria</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <div id="status" class="online"></div>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kurniawan Satria - Portfolio</title>
+<link rel="icon" href="favicon.png" />"
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/mediaqueries.css" />
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.3/dist/sweetalert2.all.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.3/dist/sweetalert2.min.css
+" rel="stylesheet">
+</head>
+<body>
+<nav id="desktop-nav">
+<div class="logo">Kurniawan Satria</div>
+<div>
+<ul class="nav-links">
+<li><a href="#about">About</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+</nav>
+<nav id="hamburger-nav">
+<div class="logo">Kurniawan Satria</div>
+<div class="hamburger-menu">
+<div class="hamburger-icon" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="menu-links">
+<li><a href="#about" onclick="toggleMenu()">About</a></li>
+<li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+<li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+<li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+</div>
+</div>
+</nav>
+<div id="status" class="online"></div>
 
-    <!-- Modal -->
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <span class="close-btn" onclick="closeModal()">&times;</span>
-        <p>Your connection status is <span id="modalStatus"></span>.</p>
-      </div>
-    </div>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Kurniawan Satria</h1>
-        <p class="section__text__p2">Frontend Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://linkedin.com/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/SatganzDevs'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>1+ years <br />Backend Development</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              Im Kurniawan Satria, a student at Madrasah Aliyah Airmolek. I'm a beginner in programming, and
-              I'm eager to learn more.
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/Screenshot 2023-12-16 192703.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">high Resolution Video For WhatsApp</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/SatganzDevs'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://status.satganzdevs.repl.co'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="assets/Screenshot 2023-12-16 192812.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Public Image Galery</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/SatganzDevs'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://stos.satganzdevs.repl.co'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/Screenshot 2023-12-16 192630.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">RestApi's Nodejs</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/SatganzDevs'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://restapi-1.satganzdevs.repl.co'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:satganzdevs@gmail.com">satganzdevs@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/wa.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://wa.me/6281316701742">WhatsApp</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2023 Kurniawan Satria. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+<!-- Modal -->
+<div id="myModal" class="modal">
+<div class="modal-content">
+<span class="close-btn" onclick="closeModal()">&times;</span>
+<p>Your connection status is <span id="modalStatus"></span>.</p>
+</div>
+</div>
+<section id="profile">
+<div class="section__pic-container">
+<img src="./assets/images/profile-pic.png" alt="John Doe profile picture" />
+</div>
+<div class="section__text">
+<p class="section__text__p1">Hello, I'm</p>
+<h1 class="title">Kurniawan Satria</h1>
+  <!-- <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=500&size=35&pause=1000&vCenter=true&width=435&height=100&lines=Kurniawan+Satria" alt="Typing SVG" /></a> -->
+<p class="section__text__p2">Frontend Developer</p>
+<div class="btn-container">
+<button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+</div>
+<div id="socials-container">
+<img src="./assets/images/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://linkedin.com/'"/>
+<img src="./assets/images/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/SatganzDevs'"/>
+</div>
+</div>
+</section>
+<section id="about">
+<p class="section__text__p1">Get To Know More</p>
+<h1 class="title">About Me</h1>
+<div class="section-container">
+<div class="section__pic-container">
+<img
+src="./assets/images/about-pic.png"
+alt="Profile picture"
+class="about-pic"
+/>
+</div>
+<div class="about-details-container">
+<div class="about-containers">
+<div class="details-container">
+<img
+src="./assets/images/experience.png"
+alt="Experience icon"
+class="icon"
+/>
+<h3>Experience</h3>
+<p>1+ years <br />Backend Development</p>
+</div>
+<div class="details-container">
+<img
+src="./assets/images/education.png"
+alt="Education icon"
+class="icon"
+/>
+<h3>Education</h3>
+<p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
+</div>
+</div>
+<div class="text-container">
+<p>
+Im Kurniawan Satria, a student at Madrasah Aliyah Airmolek. I'm a beginner in programming, and
+I'm eager to learn more.
+</p>
+</div>
+</div>
+</div>
+<img
+src="./assets/images/arrow.png"
+alt="Arrow icon"
+class="icon arrow"
+onclick="location.href='./#experience'"
+/>
+</section>
+<section id="experience">
+<p class="section__text__p1">Explore My</p>
+<h1 class="title">Experience</h1>
+<div class="experience-details-container">
+<div class="about-containers">
+<div class="details-container">
+<h2 class="experience-sub-title">Frontend Development</h2>
+<div class="article-container">
+<article>
+<img src="./assets/images/checkmark.png" alt="Experience icon" class="icon"/>
+<div>
+<h3>HTML</h3>
+<p>Experienced</p>
+</div>
+</article>
+<article>
+<img src="./assets/images/checkmark.png" alt="Experience icon" class="icon"/>
+<div>
+<h3>CSS</h3>
+<p>Experienced</p>
+</div>
+</article>
+<article>
+<img src="./assets/images/checkmark.png" alt="Experience icon" class="icon"/>
+<div>
+<h3>SASS</h3>
+<p>Intermediate</p>
+</div>
+</article>
+<article>
+<img src="./assets/images/checkmark.png" alt="Experience icon" class="icon"/>
+<div>
+<h3>JavaScript</h3>
+<p>Basic</p>
+</div>
+</article>
+<article>
+<img src="./assets/images/checkmark.png" alt="Experience icon" class="icon"
+/>
+<div>
+<h3>TypeScript</h3>
+<p>Basic</p>
+</div>
+</article>
+<article>
+<img
+src="./assets/images/checkmark.png"
+alt="Experience icon"
+class="icon"
+/>
+<div>
+<h3>Material UI</h3>
+<p>Intermediate</p>
+</div>
+</article>
+</div>
+</div>
+<div class="details-container">
+<h2 class="experience-sub-title">Frontend Development</h2>
+<div class="article-container">
+<article>
+<img
+src="./assets/images/checkmark.png"
+alt="Experience icon"
+class="icon"
+/>
+<div>
+<h3>PostgreSQL</h3>
+<p>Basic</p>
+</div>
+</article>
+<article>
+<img
+src="./assets/images/checkmark.png"
+alt="Experience icon"
+class="icon"
+/>
+<div>
+<h3>Node JS</h3>
+<p>Intermediate</p>
+</div>
+</article>
+<article>
+<img
+src="./assets/images/checkmark.png"
+alt="Experience icon"
+class="icon"
+/>
+<div>
+<h3>Express JS</h3>
+<p>Intermediate</p>
+</div>
+</article>
+<article>
+<img
+src="./assets/images/checkmark.png"
+alt="Experience icon"
+class="icon"
+/>
+<div>
+<h3>Git</h3>
+<p>Intermediate</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<img src="./assets/images/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'"/>
+</section>
+<section id="projects">
+<p class="section__text__p1">Browse My Recent</p>
+<h1 class="title">Projects</h1>
+<div class="experience-details-container">
+<div class="about-containers">
+<div class="details-container color-container">
+<div class="article-container">
+<img src="./assets/images/project-1.png" alt="Project 1" class="project-img"/>
+</div>
+<h2 class="experience-sub-title project-title">Siesta Ai</h2>
+<div class="btn-container">
+<button class="btn btn-color-2 project-btn" onclick="location.href='https://wa.me/6281268248904'">Start Use</button>
+</div>
+</div>
+<div class="details-container color-container">
+<div class="article-container">
+<img src="assets/images/project-2.png" alt="Project 2" class="project-img"/>
+</div>
+<h2 class="experience-sub-title project-title">Lesson TimeTable</h2>
+<div class="btn-container">
+<button class="btn btn-color-2 project-btn" onclick="location.href='https://SatganzDevs.github.io/Mapel'">Live Demo</button>
+</div>
+</div>
+<div class="details-container color-container">
+<div class="article-container">
+<img src="./assets/images/project-3.png" alt="Project 3" class="project-img"/>
+</div>
+<h2 class="experience-sub-title project-title">RestApi's Nodejs</h2>
+<div class="btn-container">
+<button class="btn btn-color-2 project-btn" onclick="location.href='https:/api.satganzdevs.tech'">Live Demo</button>
+</div>
+</div>
+</div>
+</div>
+<img src="./assets/images/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'"/>
+</section>
+<section id="contact">
+<p class="section__text__p1">Get in Touch</p>
+<h1 class="title">Contact Me</h1>
+<div class="contact-info-upper-container">
+<div class="contact-info-container">
+<img src="./assets/images/email.png" alt="Email icon" class="icon contact-icon email-icon"/>
+<p><a href="mailto:satganzdevs@gmail.com">satganzdevs@gmail.com</a></p>
+</div>
+<div class="contact-info-container">
+<img src="./assets/images/wa.png" alt="LinkedIn icon" class="icon contact-icon"/>
+<p><a href="https://wa.me/6281316701742">WhatsApp</a></p>
+</div>
+</div>
+</section>
+<footer>
+<nav>
+<div class="nav-links-container">
+<ul class="nav-links">
+<li><a href="#about">About</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+</nav>
+<p><strong>Made With ❤️ By Kurniawan Satria.</strong></p>
+</footer>
+<script src="assets/js/script.js"></script>
+</body>
 </html>
