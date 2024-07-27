@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
 let dudio = new Audio('https://github.com/SatganzDevs/personal-portfolioV5/raw/main/assets/audio/Rammstein%20%20Sonne.mp3')
-Swal.fire('Hello, World.').then(dudio.play())
+Swal.fire('Hello, World.').then((result) => {
+if (result.isConfirmed) {
+dudio.play()
+}
+})
 })
 
 
