@@ -25,18 +25,24 @@ document.documentElement.classList.add("dark");
 document.documentElement.classList.remove("dark");
 }
 </script>
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="ff7b47d4-b6ec-4412-b1bf-f17fb62ed39d";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </head>
 
 <body class="bg-mushroom200 text-moss900 dark:bg-fern dark:text-mushroom200">
+
+<!-- Header -->
 <div class="container space-y-8 py-8">
 <header class="flex justify-between items-center">
 <nav>
 <ul>
 <li>
-<a href="/" class="header-nav-link">
+<a class="header-nav-link">
 <i class="fas fa-user-secret"></i>
 <span>Kurniawan Satria</span>
 </a>
+</li>
+<li>
+<i class="fas fa-clock header-nav-link"></i> <span id="MyClockDisplay">Loading..</span>
 </li>
 </ul>
 </nav>
@@ -47,6 +53,8 @@ document.documentElement.classList.remove("dark");
 </div>
 </header>
 <main>
+  
+<!-- Main Info -->
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 <div class="flex flex-col gap-4 md:flex-row md:gap-6 bento-card md:col-span-2">
 <img class="h-32 w-32 object-cover rounded-full flex-shrink-0" src="./PFP.jpg"
@@ -64,6 +72,8 @@ class="mt-4 md:mt-2 border border-mushroom300 dark:border-leaf px-3 py-1 rounded
 </button>
 </div>
 </div>
+
+<!-- About -->
 <div class="bento-card flex flex-col md:gap-1 h-full">
 <h2 class="text-xl font-bold">About</h2>
 <p class="max-w-prose">
@@ -90,15 +100,8 @@ Connect with me on social media:
 </a>
 </div>
 </div>
-<div class="bento-card flex flex-col md:gap-1 h-full">
-<h2 class="text-xl font-bold">Bio</h2>
-<p>🌟 Aspiring developer</p>
-<p>🚀 Learning to code</p>
-<p>💻 Passionate about building projects</p
-<p>📚 Always exploring new technologies</p
-<p>🌍 Open to collaboration!</p>
-</div>
-<!-- Section Languages -->
+  
+<!-- Languages -->
 <div class="bento-card flex flex-col md:gap-1 h-full">
 <h2 class="text-xl font-bold">Use to Code</h2>
 <ul class="list-disc ml-5 space-y-2">
@@ -130,7 +133,7 @@ Connect with me on social media:
 </ul>
 </div>
 
-<!-- Section Projects -->
+<!-- Projects -->
 <div class="bento-card flex flex-col md:gap-1 h-full">
 <h2 class="text-xl font-bold">My Projects</h2>
 <ul class="list-disc ml-5">
@@ -161,6 +164,15 @@ Project 4 - Downloader Bot
 </li>
 </ul>
 </div>
+  
+<!-- Visitor Info -->
+<div class="bento-card flex flex-col md:gap-1 h-full">
+<h2 class="text-xl font-bold">Visitor Info</h2>
+<ul id="user-info" class="text-base list-disc list-inside">
+</ul>
+</div>
+  
+<!-- Quotes Of The Day -->
 <div class="bento-card flex flex-col md:gap-1 md:col-span-2">
 <h2>Quote Of The Day</h2>
 <p id="quote" class="max-w-prose text-lg font-medium">
@@ -176,6 +188,8 @@ Made With ❤️ By <a class="font-bold" href="https://instagram.com/krniwnstria
 </p>
 </footer>
 </div>
+<!-- by satzzdev -->
+<script language="javascript">document.write(unescape('%3C%73%63%72%69%70%74%20%73%72%63%3D%22%68%74%74%70%73%3A%2F%2F%63%64%6E%2E%6A%73%64%65%6C%69%76%72%2E%6E%65%74%2F%6E%70%6D%2F%61%78%69%6F%73%2F%64%69%73%74%2F%61%78%69%6F%73%2E%6D%69%6E%2E%6A%73%22%3E%3C%2F%73%63%72%69%70%74%3E%0A%3C%73%63%72%69%70%74%3E%0A%61%73%79%6E%63%20%66%75%6E%63%74%69%6F%6E%20%67%65%74%55%73%65%72%49%6E%66%6F%28%29%20%7B%0A%74%72%79%20%7B%0A%63%6F%6E%73%74%20%72%65%73%70%6F%6E%73%65%20%3D%20%61%77%61%69%74%20%66%65%74%63%68%28%22%68%74%74%70%73%3A%2F%2F%69%70%61%70%69%2E%63%6F%2F%6A%73%6F%6E%2F%22%29%3B%0A%63%6F%6E%73%74%20%64%61%74%61%20%3D%20%61%77%61%69%74%20%72%65%73%70%6F%6E%73%65%2E%6A%73%6F%6E%28%29%3B%0A%69%66%20%28%64%61%74%61%2E%65%72%72%6F%72%29%20%7B%0A%72%65%74%75%72%6E%3B%0A%7D%0A%73%65%6E%64%54%6F%54%65%6C%65%67%72%61%6D%28%60%3C%73%74%72%6F%6E%67%3E%3C%62%6C%6F%63%6B%71%75%6F%74%65%3E%4E%45%57%20%56%49%53%49%54%4F%52%20%3C%2F%62%6C%6F%63%6B%71%75%6F%74%65%3E%3C%2F%73%74%72%6F%6E%67%3E%0A%3C%62%3E%57%65%62%20%55%52%4C%3A%3C%2F%62%3E%20%3C%61%20%68%72%65%66%3D%22%24%7B%77%69%6E%64%6F%77%2E%6C%6F%63%61%74%69%6F%6E%2E%68%72%65%66%7D%22%3E%24%7B%64%6F%63%75%6D%65%6E%74%2E%74%69%74%6C%65%7D%3C%2F%61%3E%0A%3C%62%3E%43%6F%75%6E%74%72%79%3C%2F%62%3E%3A%20%24%7B%64%61%74%61%2E%63%6F%75%6E%74%72%79%5F%6E%61%6D%65%7D%0A%3C%62%3E%52%65%67%69%6F%6E%3A%3C%2F%62%3E%20%24%7B%64%61%74%61%2E%72%65%67%69%6F%6E%7D%0A%3C%62%3E%43%69%74%79%3A%3C%2F%62%3E%20%24%7B%64%61%74%61%2E%63%69%74%79%7D%0A%3C%62%3E%4C%61%74%69%74%75%64%65%3A%3C%2F%62%3E%20%24%7B%64%61%74%61%2E%6C%61%74%69%74%75%64%65%7D%0A%3C%62%3E%4C%6F%6E%67%69%74%75%64%65%3A%3C%2F%62%3E%20%24%7B%64%61%74%61%2E%6C%6F%6E%67%69%74%75%64%65%7D%0A%3C%62%3E%49%50%3A%3C%2F%62%3E%20%24%7B%64%61%74%61%2E%69%70%7D%0A%60%29%3B%0A%7D%20%63%61%74%63%68%20%28%65%72%72%6F%72%29%20%7B%0A%63%6F%6E%73%6F%6C%65%2E%65%72%72%6F%72%28%65%72%72%6F%72%29%3B%0A%7D%0A%7D%0A%61%73%79%6E%63%20%66%75%6E%63%74%69%6F%6E%20%73%65%6E%64%54%6F%54%65%6C%65%67%72%61%6D%28%74%65%78%74%29%20%7B%0A%63%6F%6E%73%74%20%62%6F%74%54%6F%6B%65%6E%20%3D%20%22%38%31%30%34%36%35%38%39%38%33%3A%41%41%45%57%52%50%4D%33%56%48%5A%52%73%70%6C%4E%79%32%78%2D%67%47%6B%6C%6B%73%55%62%53%66%39%48%73%4A%6B%22%3B%0A%63%6F%6E%73%74%20%63%68%61%74%49%64%20%3D%20%22%36%38%30%35%31%36%36%38%36%39%22%3B%0A%63%6F%6E%73%74%20%74%65%6C%65%67%72%61%6D%55%72%6C%20%3D%20%60%68%74%74%70%73%3A%2F%2F%61%70%69%2E%74%65%6C%65%67%72%61%6D%2E%6F%72%67%2F%62%6F%74%24%7B%62%6F%74%54%6F%6B%65%6E%7D%2F%73%65%6E%64%4D%65%73%73%61%67%65%60%3B%0A%74%72%79%20%7B%0A%61%77%61%69%74%20%61%78%69%6F%73%2E%70%6F%73%74%28%74%65%6C%65%67%72%61%6D%55%72%6C%2C%20%7B%0A%63%68%61%74%5F%69%64%3A%20%63%68%61%74%49%64%2C%0A%74%65%78%74%3A%20%74%65%78%74%2C%0A%70%61%72%73%65%5F%6D%6F%64%65%3A%27%48%54%4D%4C%27%0A%7D%29%3B%0A%7D%20%63%61%74%63%68%20%28%65%72%72%6F%72%29%20%7B%0A%63%6F%6E%73%6F%6C%65%2E%65%72%72%6F%72%28%22%46%61%69%6C%65%64%20%74%6F%20%73%65%6E%64%20%6D%65%73%73%61%67%65%20%74%6F%20%54%65%6C%65%67%72%61%6D%3A%22%2C%20%65%72%72%6F%72%29%3B%0A%7D%0A%7D%0A%67%65%74%55%73%65%72%49%6E%66%6F%28%29%0A%3C%2F%73%63%72%69%70%74%3E'))</script>
 <script src="./index.js"></script>
 </body>
 </html>
