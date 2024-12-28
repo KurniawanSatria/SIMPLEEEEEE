@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html"
+    "dev": "parcel src/*.html ",
+    "build": "parcel build src/*.html --no-source-maps"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
