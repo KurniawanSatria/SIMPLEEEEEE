@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "parcel src/*.html ",
-    "build": "parcel build src/*.html --no-source-maps"
+    "build": "parcel build src/*.html --no-optimize"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
