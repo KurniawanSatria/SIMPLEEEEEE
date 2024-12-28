@@ -11,5 +11,9 @@ publicDir = "dist"
 run = ["sh", "-c", "npm run dev"]
 
 [[ports]]
-localPort = 5173
+localPort = 1234
 externalPort = 80
+
+[[ports]]
+localPort = 3000
+externalPort = 3000
