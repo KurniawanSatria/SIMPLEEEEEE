@@ -21,10 +21,8 @@
 <script>
 if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
 document.documentElement.classList.add("dark");
-document.getElementById("toggle-icon").classList.add("fa-sun")
 } else {
 document.documentElement.classList.remove("dark");
-document.getElementById("toggle-icon").classList.add("fa-moon")
 }
 </script>
 </head>
