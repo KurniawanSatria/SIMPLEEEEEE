@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "@parcel/transformer-webmanifest": "^2.13.3",
+    "@parcel/packager-raw-url":"^2.13.3",
     "@tailwindcss/typography": "^0.5.10",
     "parcel": "^2.10.0",
     "postcss": "^8.4.21",
