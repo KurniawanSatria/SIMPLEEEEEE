@@ -1,7 +1,5 @@
 // Bento grid
-const audio = new Audio(
-"https://github.com/SatganzDevs/personal-portfolioV5/raw/main/assets/audio/Rammstein%20%20Sonne.mp3"
-);
+const audio = new Audio("https://github.com/SatganzDevs/personal-portfolioV5/raw/main/assets/audio/kamin-emin-feat-jony-speed-up-tik-tok-version-128-ytshorts.savetube.me.mp3");
 let is_playing = false;
 
 function playBacksound() {
@@ -15,10 +13,8 @@ audio.play();
 is_playing = true;
 
 audio.addEventListener("ended", () => {
-icon.classList.remove("fa-pause");
-icon.classList.add("fa-play");
-tst.innerHTML = "Play Audio"
-is_playing = false;
+audio.play()
+is_playing = true;
 });
 } else {
 audio.pause();
