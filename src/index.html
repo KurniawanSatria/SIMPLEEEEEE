@@ -21,6 +21,11 @@
 <link rel="manifest" href="./site.webmanifest">
 <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<style>
+body.loaded #loader {
+display: none;
+}
+</style>
 <script>
 if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
 document.documentElement.classList.add("dark");
@@ -32,7 +37,15 @@ document.documentElement.classList.remove("dark");
 </head>
 
 <body class="bg-mushroom200 text-moss900 dark:bg-fern dark:text-mushroom200">
-
+<div id="loader" class="sk-chase">
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+</div>
+  
 <!-- Header -->
 <div class="container space-y-8 py-8">
 <header class="flex justify-between items-center">
@@ -188,6 +201,9 @@ Made With ❤️ By <a class="font-bold" href="https://instagram.com/krniwnstria
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.polyfilled.js"></script>
 <script>
+window.addEventListener('load', () => {
+document.body.classList.add('loaded');
+});
 const playlist = [
 'https://raw.githubusercontent.com/SatganzDevs/personal-portfolioV5/main/assets/audio/Line%20Without%20a%20Hook.mp3',
 'https://raw.githubusercontent.com/SatganzDevs/personal-portfolioV5/main/assets/audio/kamin.mp3',
