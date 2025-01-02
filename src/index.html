@@ -68,9 +68,6 @@ alt="Headshot of Nooranah Malberg" />
 I'm a beginner in programming,
 </p>
 <p>and I'm eager to learn more.</p>
-<audio id="player"  autoplay loop style="display:none;">
-<source src="https://raw.githubusercontent.com/SatganzDevs/personal-portfolioV5/main/assets/audio/kamin.mp3" type="audio/mp3" />
-</audio>
 </div>
 </div>
 
@@ -187,14 +184,30 @@ Made With ❤️ By <a class="font-bold" href="https://instagram.com/krniwnstria
 </p>
 </footer>
 </div>
+<audio id="player" autoplay style="display:none;"></audio>
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.polyfilled.js"></script>
 <script>
-const player = new Plyr('#player', {
-autoplay: true,  
-loop: { active: true },
-controls: []  
+const playlist = [
+'https://raw.githubusercontent.com/SatganzDevs/personal-portfolioV5/main/assets/audio/kamin.mp3',
+'https://raw.githubusercontent.com/SatganzDevs/personal-portfolioV5/main/assets/audio/Line Without a Hook.mp3',
+'https://raw.githubusercontent.com/SatganzDevs/personal-portfolioV5/main/assets/audio/Cry - Cigarettes After Sex (128kbps).mp3'
+];
+let currentIndex = 0; 
+const audioElement = document.getElementById('player');
+const player = new Plyr(audioElement, {
+autoplay: true,
+loop: { active: false }, 
+controls: [] 
 });
+const loadNextAudio = () => {
+currentIndex = (currentIndex + 1) % playlist.length; 
+audioElement.src = playlist[currentIndex]; 
+audioElement.play(); 
+};
+audioElement.src = playlist[currentIndex];
+audioElement.play();
+audioElement.addEventListener('ended', loadNextAudio);
 new Typed('#typed-text', {
 strings: ['Kurniawan Satria', 'a Programmer', 'a Web Developer', 'a Lover'],
 typeSpeed: 70, 
