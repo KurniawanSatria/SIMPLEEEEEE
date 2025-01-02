@@ -19,6 +19,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
 <link rel="manifest" href="./site.webmanifest">
+<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 <script>
 if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
@@ -67,11 +68,9 @@ alt="Headshot of Nooranah Malberg" />
 I'm a beginner in programming,
 </p>
 <p>and I'm eager to learn more.</p>
-<button onclick="playBacksound()"
-class="mt-4 md:mt-2 border border-mushroom300 dark:border-leaf px-3 py-1 rounded-lg self-start flex gap-2 items-center">
-<i id="audioicon" class="fas fa-play"></i>
-<p id="audiotxt" class="text-sm">Play Audio</p>
-</button>
+<audio id="player" controls>
+<source src="https://raw.githubusercontent.com/SatganzDevs/personal-portfolioV5/main/assets/audio/kamin.mp3" type="audio/mp3" />
+</audio>
 </div>
 </div>
 
@@ -189,7 +188,9 @@ Made With ❤️ By <a class="font-bold" href="https://instagram.com/krniwnstria
 </footer>
 </div>
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
 <script>
+const player = new Plyr('#player');
 new Typed('#typed-text', {
 strings: ['Kurniawan Satria', 'a Programmer', 'a Web Developer', 'a Lover'],
 typeSpeed: 70, 
