@@ -100,5 +100,40 @@ console.error(error);
 }
 
 
-window.addEventListener("load", all);
+
 setTimeout(all, 1000);
+
+window.addEventListener('load', () => {
+all()
+document.body.classList.add('loaded');
+});
+const playlist = [
+'https://raw.githubusercontent.com/SatganzDevs/personal-portfolioV5/main/assets/audio/Cry%20-%20Cigarettes%20After%20Sex%20(128kbps).mp3',
+'https://raw.githubusercontent.com/SatganzDevs/personal-portfolioV5/main/assets/audio/Line%20Without%20a%20Hook.mp3',
+'https://raw.githubusercontent.com/SatganzDevs/personal-portfolioV5/main/assets/audio/kamin.mp3',
+];
+let currentIndex = 0; 
+const audioElement = document.getElementById('player');
+const player = new Plyr(audioElement, {
+autoplay: false,
+loop: { active: false }, 
+controls: [] 
+});
+const loadNextAudio = () => {
+currentIndex = (currentIndex + 1) % playlist.length; 
+audioElement.src = playlist[currentIndex]; 
+audioElement.play(); 
+};
+audioElement.src = playlist[currentIndex];
+document.addEventListener('click', () => {
+if (audioElement.paused) {
+audioElement.play();
+}
+});
+audioElement.addEventListener('ended', loadNextAudio);
+new Typed('#typed-text', {
+strings: ['Kurniawan Satria', 'a Programmer', 'a Web Developer', 'a Lover'],
+typeSpeed: 70, 
+backSpeed: 70, 
+loop: true,    
+});
