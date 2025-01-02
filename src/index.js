@@ -1,31 +1,4 @@
 // Bento grid
-const audio = new Audio("https://github.com/SatganzDevs/personal-portfolioV5/raw/main/assets/audio/kamin-emin-feat-jony-speed-up-tik-tok-version-128-ytshorts.savetube.me.mp3");
-let is_playing = false;
-
-function playBacksound() {
-const icon = document.getElementById("audioicon");
-const tst = document.getElementById("audiotxt");
-if (!is_playing) {
-icon.classList.remove("fa-play");
-icon.classList.add("fa-pause");
-tst.innerHTML = "Pause Audio"
-audio.play();
-is_playing = true;
-
-audio.addEventListener("ended", () => {
-audio.play()
-is_playing = true;
-});
-} else {
-audio.pause();
-audio.currentTime = 0;
-icon.classList.remove("fa-pause");
-icon.classList.add("fa-play");
-tst.innerHTML = "Play Audio"
-is_playing = false;
-}
-}
-
 function isTouchDevice() {
 return (
 "ontouchstart" in window ||
