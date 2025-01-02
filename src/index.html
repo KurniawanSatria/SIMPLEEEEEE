@@ -37,6 +37,18 @@ document.documentElement.classList.remove("dark");
 </head>
 
 <body class="bg-mushroom200 text-moss900 dark:bg-fern dark:text-mushroom200">  
+<!-- Preloader -->
+<div id="preloader">
+<div class="sk-chase">
+<div class="sk-chase-dot"></div>
+<div class="sk-chase-dot"></div>
+<div class="sk-chase-dot"></div>
+<div class="sk-chase-dot"></div>
+<div class="sk-chase-dot"></div>
+<div class="sk-chase-dot"></div>
+</div>
+</div>
+  
 <!-- Header -->
 <div class="container space-y-8 py-8">
 <header class="flex justify-between items-center">
@@ -181,14 +193,6 @@ Loading...
 <p id="author" class="max-w-prose text-left text-sm italic">
 </p>
 </div>
-<div id="loader" class="sk-chase">
-  <div class="sk-chase-dot"></div>
-  <div class="sk-chase-dot"></div>
-  <div class="sk-chase-dot"></div>
-  <div class="sk-chase-dot"></div>
-  <div class="sk-chase-dot"></div>
-  <div class="sk-chase-dot"></div>
-</div>
 </main>
 <footer>
 <p>
@@ -204,14 +208,14 @@ window.addEventListener('load', () => {
 document.body.classList.add('loaded');
 });
 const playlist = [
+'https://raw.githubusercontent.com/SatganzDevs/personal-portfolioV5/main/assets/audio/Cry%20-%20Cigarettes%20After%20Sex%20(128kbps).mp3',
 'https://raw.githubusercontent.com/SatganzDevs/personal-portfolioV5/main/assets/audio/Line%20Without%20a%20Hook.mp3',
 'https://raw.githubusercontent.com/SatganzDevs/personal-portfolioV5/main/assets/audio/kamin.mp3',
-'https://raw.githubusercontent.com/SatganzDevs/personal-portfolioV5/main/assets/audio/Cry%20-%20Cigarettes%20After%20Sex%20(128kbps).mp3'
 ];
 let currentIndex = 0; 
 const audioElement = document.getElementById('player');
 const player = new Plyr(audioElement, {
-autoplay: true,
+autoplay: false,
 loop: { active: false }, 
 controls: [] 
 });
@@ -221,7 +225,11 @@ audioElement.src = playlist[currentIndex];
 audioElement.play(); 
 };
 audioElement.src = playlist[currentIndex];
+document.addEventListener('click', () => {
+if (audioElement.paused) {
 audioElement.play();
+}
+});
 audioElement.addEventListener('ended', loadNextAudio);
 new Typed('#typed-text', {
 strings: ['Kurniawan Satria', 'a Programmer', 'a Web Developer', 'a Lover'],
