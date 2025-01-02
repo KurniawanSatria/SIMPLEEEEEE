@@ -75,28 +75,6 @@ m = m < 10 ? "0" + m : m;
 s = s < 10 ? "0" + s : s;
 const time = ' ' + dn + ', ' +h + ":" + m + " " + ampm;
 document.getElementById("MyClockDisplay").innerText = time;
-const userInfoElement = document.getElementById("user-info");
-userInfoElement.innerHTML = "Fetching location data...";
-try {
-const response = await fetch("https://ipapi.co/json/");
-const data = await response.json();
-if (data.error) {
-userInfoElement.innerHTML = "Failed to fetch location info.";
-return;
-}
-const locationInfo = `
-Country: ${data.country_name}<br>
-Region: ${data.region}<br>
-City: ${data.city}<br>
-Latitude: ${data.latitude}<br>
-Longitude: ${data.longitude}<br>
-IP: ${data.ip}
-`;
-userInfoElement.innerHTML = locationInfo;
-} catch (error) {
-userInfoElement.innerHTML = "An error occurred while fetching location data.";
-console.error(error);
-}
 }
 
 
